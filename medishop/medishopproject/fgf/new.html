@@ -1,0 +1,29 @@
+<nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="">Home</a>
+        </li>
+        <li class="nav-item dropdown {% if 'shop' in request.path %} active {% endif %}">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           shop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="">All Products</a></li>
+
+            <li><a class="dropdown-item" href=""> {{cat.name}}</a></li>
+            <a class="dropdown-item"href="https://en.wikipedia.org/wiki/Thiruvananthapuram">tvm</a></li>
+     <li> <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kollam">kollam</a></li>
+     <li> <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Pathanamthitta">pathanamthitta</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alapuzha">Alappuzha</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam">Kottayam</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Idukki">Idukki</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">Ekm</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a></li>
+      <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Palakad">Palakad</a></li>
+
+          </ul>
+        </li></ul>
+    </div>
+</nav>

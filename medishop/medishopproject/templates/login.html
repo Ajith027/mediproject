@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .contact{
+         position: absolute;
+    top: 25%;
+    left: 35%;
+
+    width: 183px;
+    height: 100px;
+    padding:30px 80px 240px ;
+    background: rgba(0,0,0,0.6);
+    }
+    input {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 8px;
+
+
+}
+ .btn{
+
+    margin-left:55px;
+    color:red;
+ }
+ h1{
+    margin-left:55px;
+ }
+
+    </style>
+</head>
+<body>
+
+<img width=100% src="https://thumbs.dreamstime.com/b/doctor-stethoscope-hand-hospital-background-gown-94227568.jpg">
+<form class="contact" action="{% url 'medishop:login' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <h1 ><u><b></b>LOGIN</b></u></h1><br>
+            <input type="text" name="username" placeholder="Enter username"><br>
+            <input type="password" name="password" placeholder="password"><br>
+            <input type="submit" >    <h3><a href="{% url 'medishop:register' %}">Register</a></h3>
+
+        </div>
+        {% for msg in messages %}
+<h2 style="text-align:center;color:red">{{msg}}</h2>
+{% endfor %}
+    </form>
+
+</body>
+</html>

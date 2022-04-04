@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="card" style="width:20%;margin:55px 500px 40px;text-align:center;">
+  <img src="{{item.img.url}}" alt="Denim Jeans" style="width:100%">
+  <h1 >{{item.name}}</h1>
+ <h4> <p  style="color:red">${{item.price}}</p></h4>
+  <p style="padding-left:12px">Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+    <div style="margin-left:20px;margin-right:20px;margin-bottom:10px">
+    <a href="{% url 'medishop:thank' %}"  class="btn btn-primary btn-block my_custom_button" >Buy It</a>
+    <a  href="{% url 'medishop:index' %}" class="btn btn-danger btn-block my_custom_button"  >Cancel</a>
+</div>
+
+</div>
+{% endblock %}
